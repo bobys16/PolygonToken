@@ -1,8 +1,8 @@
-const Solvine = artifacts.require("Solvine");
+const SolvineT = artifacts.require("SolvineT");
 
 module.exports = function(deployer) {
-  const initialSupply = 1000000; // Example initial supply
-  const maxSupply = 10000000; // Example max supply
+  const initialSupply = "20000000000000000000000000"; // Adjusted initial supply with decimal factor (18 decimal places)
+  const maxSupply = "1520000000000000000000000000000"; // Adjusted max supply with decimal factor (18 decimal places)
 
-  deployer.deploy(Solvine, initialSupply, maxSupply);
+  deployer.deploy(SolvineT, initialSupply, maxSupply);
 };
