@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/bobys16/PolygonToken/issues"
   },
-  "homepage": "https://github.com/bobys16/PolygonToken#readme"
+  "homepage": "https://github.com/bobys16/PolygonToken#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "truffle": "^5.11.5"
+  }
 }

@@ -4,14 +4,14 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MemeToken is ERC20, Ownable {
+contract solvine is ERC20, Ownable {
     uint256 private _maxSupply;
     mapping(address => bool) private _whitelist;
 
     event MaxSupplyChanged(uint256 newMaxSupply);
     event WhitelistUpdated(address indexed account, bool isWhitelisted);
 
-    constructor(uint256 initialSupply, uint256 maxSupply) ERC20("MemeToken", "MEME") {
+    constructor(uint256 initialSupply, uint256 maxSupply) ERC20("SOLVINE", "SLV") {
         require(maxSupply >= initialSupply, "Max supply must be greater than or equal to initial supply");
         _maxSupply = maxSupply;
         _mint(msg.sender, initialSupply);
