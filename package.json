@@ -1,0 +1,23 @@
+{
+  "name": "polygon-testnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobys16/PolygonToken.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobys16/PolygonToken/issues"
+  },
+  "homepage": "https://github.com/bobys16/PolygonToken#readme"
+}
