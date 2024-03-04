@@ -1,12 +1,10 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const privateKey = "your private key"; // Alternatively, you can use your private key
-
+const privateKey = "31f36f1fbef5c77042ceecf16b7d275f842d632e5ecfc543ec539a57e9969230"; 
 module.exports = {
   networks: {
     polygon_testnet: {
       provider: () => new HDWalletProvider({
-        // Or you can use privateKey instead of mnemonic
-        privateKey: privateKey,
+        privateKeys: [privateKey],
         providerOrUrl: `https://rpc-mumbai.maticvigil.com`
       }),
       network_id: 80001,
