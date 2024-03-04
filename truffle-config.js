@@ -1,23 +1,26 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const fs = require('fs');
-const mnemonic = fs.readFileSync(".secret").toString().trim();
+const privateKey = "your private key"; // Alternatively, you can use your private key
 
 module.exports = {
   networks: {
     polygon_testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.maticvigil.com`),
+      provider: () => new HDWalletProvider({
+        // Or you can use privateKey instead of mnemonic
+        privateKey: privateKey,
+        providerOrUrl: `https://rpc-mumbai.maticvigil.com`
+      }),
       network_id: 80001,
-      gas: 8000000,        // Gas limit
-      gasPrice: 1000000000,  // Gas price (1 gwei)
-      confirmations: 2,    // Number of confirmations to wait before deployment is considered successful
-      timeoutBlocks: 200,  // Number of blocks before a deployment times out
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      gas: 8000000,
+      gasPrice: 1000000000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
   },
   compilers: {
     solc: {
-      version: "^0.8.0",   // Compiler version
-      settings: {          // Compiler settings
+      version: "^0.8.0",
+      settings: {
         optimizer: {
           enabled: true,
           runs: 200
